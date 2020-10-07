@@ -3,12 +3,12 @@ package org.l2x9.antistackedtotem.events;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class InventoryOpen implements Listener {
+public class InventoryClick implements Listener {
     @EventHandler
-    public void onOpen(InventoryOpenEvent event) {
+    public void onClick(InventoryClickEvent event) {
         for (ItemStack stack : event.getInventory().getContents()) {
             if (stack != null) {
                 if (stack.getType() == Material.TOTEM) {

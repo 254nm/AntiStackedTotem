@@ -10,9 +10,11 @@ public class PlayerScroll implements Listener {
     @EventHandler
     public void onScroll(PlayerItemHeldEvent event) {
         for (ItemStack itemStack : event.getPlayer().getInventory().getContents()) {
-            if (itemStack.getType() == Material.TOTEM) {
-                if (itemStack.getAmount() > itemStack.getMaxStackSize()) {
-                    itemStack.setAmount(itemStack.getMaxStackSize());
+            if (itemStack != null) {
+                if (itemStack.getType() == Material.TOTEM) {
+                    if (itemStack.getAmount() > itemStack.getMaxStackSize()) {
+                        itemStack.setAmount(itemStack.getMaxStackSize());
+                    }
                 }
             }
         }
