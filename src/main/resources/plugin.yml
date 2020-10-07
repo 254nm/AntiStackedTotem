@@ -1,0 +1,7 @@
+name: AntiStackedTotem
+version: ${project.version}
+main: org.l2x9.antistackedtotem.AntiStackedTotem
+prefix: AntiStackedTotem
+authors: [ 254n_m ]
+description: Prevent stacked totems
+website: https://www.l2x9.org
